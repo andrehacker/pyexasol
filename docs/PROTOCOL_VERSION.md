@@ -6,6 +6,8 @@ If you have Exasol v6.x, do nothing.
 
 If you have Exasol v7.0+, you may add the extra connection option `protocol_version=pyexasol.PROTOCOL_V2`. It will improve the performance of some `.meta` functions. Also, it will allow you to use [no SQL metadata commands](https://github.com/exasol/websocket-api/blob/master/docs/WebsocketAPIV2.md#metadata-related-commands) via [`.meta.execute_meta_nosql()`](/docs/REFERENCE.md#execute_meta_nosql) function.
 
+If you have Exasol v7.1+ (early access), you may add the extra connection option `protocol_version=pyexasol.PROTOCOL_V2`. It will allow you to use the new OpenID Connect authentication method.
+
 ## Explanation
 
 Exasol has the concept of "protocol version" which is used to extend the functionality of new database drivers without breaking the backwards compatibility with older database drivers.
@@ -13,6 +15,8 @@ Exasol has the concept of "protocol version" which is used to extend the functio
 Exasol v6.x supports WebSocket protocol version [`1`](https://github.com/exasol/websocket-api/blob/master/docs/WebsocketAPIV1.md) only.
 
 Exasol v7.0+ supports WebSocket protocol versions [`1`](https://github.com/exasol/websocket-api/blob/master/docs/WebsocketAPIV1.md) and [`2`](https://github.com/exasol/websocket-api/blob/master/docs/WebsocketAPIV2.md).
+
+Exasol v7.1+ supports WebSocket protocol versions [`1`](https://github.com/exasol/websocket-api/blob/master/docs/WebsocketAPIV1.md), [`2`](https://github.com/exasol/websocket-api/blob/master/docs/WebsocketAPIV2.md) and `3` (will be documented).
 
 ---
 
